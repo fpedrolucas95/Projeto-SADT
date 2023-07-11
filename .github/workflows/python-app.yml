@@ -29,4 +29,6 @@ jobs:
     - name: Run Flask application
       run: |
         pip install gunicorn
-        gunicorn app:app -b 0.0.0.0:${{ github.event.inputs.port }}
+        gunicorn app:app -b 0.0.0.0:${{ github.event.inputs.port }} --preload
+      env:
+        PORT: ${{ github.event.inputs.port }}
