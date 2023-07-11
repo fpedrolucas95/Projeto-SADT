@@ -48,5 +48,5 @@ def handle_connect():
 def handle_disconnect():
     print('Desconectado')
 
-if __name__ == '__main__':
-   socketio.run(app, debug=True)
+if __name__ == '__main__': # Codigo direto do ChatGPT - primeira vez testando a execução de aplicativos Flask pelo Github Actions - se der errado, fica o aviso
+   socketio.run(app, host='0.0.0.0', port=int(os.environ.get('PORT', 5000)), debug=True)
