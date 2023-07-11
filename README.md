@@ -3,6 +3,7 @@
     <a href="https://www.python.org" target="_blank"> <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="python"/></a>
     <a href="https://flask.palletsprojects.com/" target="_blank"> <img src="https://img.shields.io/badge/Flask-000000?style=for-the-badge&logo=flask&logoColor=white" alt="flask"/></a>
     <a href="https://pytorch.org/" target="_blank"> <img src="https://img.shields.io/badge/PyTorch-EE4C2C?style=for-the-badge&logo=pytorch&logoColor=white" alt="pytorch"/></a>
+    <a href="https://getbootstrap.com/" target="_blank"> <img src="https://img.shields.io/badge/Bootstrap-000000?style=for-the-badge&logo=Bootstrap&logoColor=white" alt="Bootstrap"/></a>
 </p>
 
 <p>Esse projeto permite a análise de documentos PDF buscando por guias SADT, utilizando um modelo de rede neural.</p>
