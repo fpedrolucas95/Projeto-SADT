@@ -1,4 +1,4 @@
-# Ele considera que você terá uma pasta principal e dentro dela duas subpastas, 
+# Ele considera que você terá uma pasta principal e dentro dela duas subpastas, com imagens JPG
 # Uma chamada "guia SADT" onde você deve colocar o maior número de guias possível, de todas as operadoras de saúde de preferência
 # E outra chamada "não guia SADT", coloque todo tipo de documento, principalmente pedidos médicos, escaners de documentos, etc.
 
