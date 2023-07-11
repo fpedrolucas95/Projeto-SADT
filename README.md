@@ -62,6 +62,6 @@ Uma vez que o servidor esteja funcionando, você poderá acessar a aplicação e
 
 <h2>Desenvolvedor</h2>
 
-<p>Nome: Pedro Lucas França</p>
-<p>Email: fpedrolucas95@gmail.com</p>
-<a href="https://www.francadev.com.br" target=_blank>Visite meu site</a>
+<p>Nome: Pedro Lucas França<br>
+Email: fpedrolucas95@gmail.com<br>
+<a href="https://www.francadev.com.br" target=_blank>Visite meu site</a></p>
