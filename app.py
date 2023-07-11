@@ -42,11 +42,11 @@ def carregar_arquivos():
 
 @socketio.on('connect')
 def handle_connect():
-    print('Client connected')
+    print('Conectado')
 
 @socketio.on('disconnect')
 def handle_disconnect():
-    print('Client disconnected')
+    print('Desconectado')
 
 if __name__ == '__main__':
    socketio.run(app, debug=True)
