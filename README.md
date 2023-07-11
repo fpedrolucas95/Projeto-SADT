@@ -57,7 +57,7 @@ Uma vez que o servidor esteja funcionando, você poderá acessar a aplicação e
 <p>Lembre-se de que você precisa ter o Python instalado em sua máquina, além do pip (gerenciador de pacotes Python), e um terminal para digitar os comandos.</p>
 
 
-<h2>📄 Licença</h2>
+<h2>Licença</h2>
 <p>Este projeto está sob a licença GNU General Public License v3.0. Qualquer pessoa é bem-vinda para contribuir com correções de erros ou novas funcionalidades. Se você deseja contribuir, basta criar um pull request com suas alterações.</p>
 
 <h2>Desenvolvedor</h2>
