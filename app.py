@@ -33,10 +33,16 @@ def carregar_arquivos():
          total_guias += len(guias_sadt_pages)
 
       # Mensagem com as páginas identificadas
-      if len(pdf_files) > 1:
-         mensagem = "Encontrei {} guias nos arquivos selecionados.".format(total_guias)
+      if total_guias > 0:
+         if len(pdf_files) > 1:
+            mensagem = "Encontrei {} guias nos arquivos selecionados.".format(total_guias)
+         else:
+            mensagem = "Encontrei {} guias no arquivo selecionado.".format(total_guias)
       else:
-         mensagem = "Encontrei {} guias no arquivo selecionado.".format(total_guias)
+         if len(pdf_files) > 1:
+            mensagem = "Não foram encontradas guias nos arquivos selecionados."
+         else:
+            mensagem = "Não foram encontradas guias no arquivo selecionado."
 
       return render_template('upload.html', message=mensagem)
 
