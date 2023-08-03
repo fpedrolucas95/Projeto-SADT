@@ -11,13 +11,13 @@
 <h2>Funcionalidades</h2>
 <h3>Upload de Documentos PDF</h3>
 <p><b>Interface de usuário para upload de documentos PDF:</b> A aplicação fornece uma interface de usuário onde os usuários podem selecionar vários arquivos PDF para upload. Uma vez que os arquivos são selecionados, eles são salvos temporariamente em uma pasta especificada.</p>
-<h3>Análise de Documentos PDF</h3>
-<p><b>Análise de documentos PDF para identificação de guias SADT utilizando um modelo de rede neural:</b> Cada arquivo PDF carregado é então analisado página por página. As páginas são convertidas em imagens, que são então alimentadas em um modelo de rede neural ResNet50 treinado para identificar guias SADT. Cada página identificada como uma guia SADT é registrada. O número total de guias SADT encontradas em todos os arquivos é então calculado.</p>
+<h3>Análise e Extração de Dados de Documentos PDF</h3>
+<p><b>Análise de documentos PDF para identificação e extração de dados de guias SADT utilizando um modelo de rede neural e a biblioteca PyTesseract:</b> Cada arquivo PDF carregado é então analisado página por página. As páginas são convertidas em imagens, que são então alimentadas em um modelo de rede neural ResNet50 treinado para identificar guias SADT. Cada página identificada como uma guia SADT é registrada e os dados relevantes são extraídos utilizando a biblioteca PyTesseract. O número total de guias SADT encontradas em todos os arquivos é então calculado, e a lista de dados extraídos é retornada para a interface do usuário.</p>
 <h3>Feedback em Tempo Real</h3>
 <p><b>Progresso da análise em tempo real utilizando Socket.IO:</b> À medida que cada arquivo PDF é analisado, o progresso é emitido para a interface do usuário através de Socket.IO. Isso permite que os usuários vejam o progresso da análise em tempo real na forma de uma barra de progresso.</p>
 
 <h2>Próximos Passos</h2>
-<p>As futuras melhorias deste projeto incluem a inspeção visual de cada guia SADT para identificação de inconformidades utilizando inteligência artificial, a extração de dados dos campos de cada guia SADT reconhecida, a comparação dos dados extraídos com um XML correspondente.</p>
+<p>As futuras melhorias deste projeto incluem a inspeção visual de cada guia SADT para identificação de inconformidades utilizando inteligência artificial, a extração de dados dos campos de forma refinada de cada guia SADT reconhecida, a comparação dos dados extraídos com um XML correspondente.</p>
 
 <h2>Tecnologias Utilizadas</h2>
 <p>Este projeto utiliza Python como a linguagem de programação principal. Flask é usado para fornecer a interface de usuário e gerenciar o upload de arquivos. PyTorch é usado para o modelo de aprendizado de máquina, que é um ResNet50 que foi treinado para identificar guias SADT em imagens de páginas de PDF. O projeto também usa o Flask-SocketIO para fornecer feedback em tempo real na interface do usuário sobre o progresso da análise dos documentos PDF.</p>
