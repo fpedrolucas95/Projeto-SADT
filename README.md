@@ -28,7 +28,7 @@
     <li>[x] Análise de documentos PDF para identificação de guias SADT utilizando um modelo de rede neural.</li>
     <li>[x] Progresso da análise em tempo real utilizando Socket.IO.</li>
     <li>[ ] Inspeção visual de cada guia SADT para identificação de inconformidades e identificação dos campos com dados, também utilizando inteligência artificial.</li>
-    <li>[ ] Extração de dados dos campos de cada guia SADT reconhecida utilizando a biblioteca PyTesseract.</li>
+    <li>[x] Extração de dados dos campos de cada guia SADT reconhecida utilizando a biblioteca PyTesseract.</li>
     <li>[ ] Comparação dos dados extraídos com um XML correspondente.</li>
     <li>[ ] Empacotamento da aplicação como um Docker para ser executada no Google Cloud ou na Azure (ambas tem ferramentas de processamento de imagem e de reconhecimento de caracteres incríveis).</li>
 </ul>
