@@ -55,6 +55,27 @@
    </div>
    {% endif %}
 
+   {% if guias %}
+   <div class="table-responsive mt-3">
+      <table class="table">
+         <thead>
+            <tr>
+               <th scope="col">#</th>
+               <th scope="col">Dados</th>
+            </tr>
+         </thead>
+         <tbody>
+            {% for guia in guias %}
+            <tr>
+               <th scope="row">{{ loop.index }}</th>
+               <td>{{ guia }}</td>
+            </tr>
+            {% endfor %}
+         </tbody>
+      </table>
+   </div>
+   {% endif %}
+
    <script>
       var socket = io.connect('http://' + document.domain + ':' + location.port);
       var analyzeButton = document.getElementById('analyzeButton');

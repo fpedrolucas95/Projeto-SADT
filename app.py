@@ -8,7 +8,7 @@ app = Flask(__name__)
 socketio = SocketIO(app)
 
 # Configurações
-temp_folder = "/tmp/"
+temp_folder = "./temp/"
 os.makedirs(temp_folder, exist_ok=True)
 
 @app.route('/')
@@ -20,6 +20,7 @@ def carregar_arquivos():
    if request.method == 'POST':
       pdf_files = request.files.getlist("pdf")
       total_guias = 0
+      todas_guias = []
 
       for pdf in pdf_files:
          nome_arquivo_pdf = secure_filename(pdf.filename)
@@ -30,6 +31,7 @@ def carregar_arquivos():
              socketio.emit('progress', {'percentage': percentage})
 
          guias_sadt_pages = analisar_pdf(os.path.join(temp_folder, nome_arquivo_pdf), emit_progress)
+         todas_guias.append(guias_sadt_pages)
          total_guias += len(guias_sadt_pages)
 
       # Mensagem com as páginas identificadas
@@ -44,7 +46,7 @@ def carregar_arquivos():
          else:
             mensagem = "Não foram encontradas guias no arquivo selecionado."
 
-      return render_template('upload.html', message=mensagem)
+      return render_template('upload.html', message=mensagem, guias=todas_guias)
 
 @socketio.on('connect')
 def handle_connect():
