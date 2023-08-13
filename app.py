@@ -3,6 +3,7 @@ from werkzeug.utils import secure_filename
 from flask_socketio import SocketIO, emit
 import os
 from sistema.modulo_leitor_arquivo_PDF.leitor_pdf import analisar_pdf
+from sistema.modulo_leitor_arquivo_PDF.extrator import extrair_dados_raw
 
 app = Flask(__name__)
 socketio = SocketIO(app)

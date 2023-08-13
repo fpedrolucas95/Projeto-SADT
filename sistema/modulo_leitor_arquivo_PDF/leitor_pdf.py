@@ -6,7 +6,7 @@ from PyPDF2 import PdfReader
 import pdf2image
 import torch.nn as nn
 from torch.utils.data import Dataset, DataLoader
-from .extrator import extrair_dados_raw
+from sistema.modulo_leitor_arquivo_PDF.extrator import extrair_dados_raw
 
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 model_path = "modelo/modelo_guia_SADT.pth"
@@ -61,11 +61,11 @@ def analisar_pdf(pdf_path, callback):
             page_num = i * dataloader.batch_size + j + 1
             completion_percentage = page_num / len(dataset) * 100
             callback(completion_percentage)
-            if prediction.item() == 0:
+            if prediction.item() == 1:  # Supondo que o label 1 seja para guias
                 image = pdf2image.convert_from_path(pdf_path, dpi=300, first_page=page_num, last_page=page_num, fmt='png')[0]
                 image_path = os.path.join(temp_folder, f'pagina_{page_num}.png')
                 image.save(image_path)
                 dados_pagina = extrair_dados_raw(image_path)
                 guias_sadt_pages.append(dados_pagina)
-    
+
     return guias_sadt_pages
